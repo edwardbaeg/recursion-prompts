@@ -256,7 +256,7 @@ var buildList = function(value, length) {
   if (length === 0) {
     return [];
   }
-  return [value].concat(buildList(value, length -1 ));
+  return [value].concat(buildList(value, length - 1));
 };
 
 // 19. Implement FizzBuzz. Given integer n, return an array of the string representations of 1 to n.
@@ -364,7 +364,7 @@ var fibonacci = function(n) {
   }
   var prev = fibonacci(n - 1);
   var next = prev.slice(-2).reduce((sum, num) => sum + num);
-  return prev.concat([next]);
+  return [...prev, next];
 };
 
 // 26. Return the Fibonacci number located at index n of the Fibonacci sequence.
@@ -477,7 +477,7 @@ var augmentElements = function(array, aug) {
   if (array.length === 0) {
     return [];
   }
-  return [array[0].concat(aug)].concat(augmentElements(array.slice(1), aug));
+  return [array[0], ...aug, ...augmentElements(array.slice(1), aug)];
 };
 
 // 34. Reduce a series of zeroes to a single 0.
