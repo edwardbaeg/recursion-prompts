@@ -1,4 +1,4 @@
-Repository forked from `/JS-Challenges/recursion-prompts`
+Repository forked from `JS-Challenges/recursion-prompts`
 
 ## Completion:
 
